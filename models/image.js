@@ -1,9 +1,9 @@
-// Image.js (Schema definition)
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const imageSchema = new Schema({
-    headerImage: { type: String, required: true }, // Path or URL of header image
+const imageSchema = new mongoose.Schema({
+  headerImage: String,
 });
 
-module.exports = mongoose.model('Image', imageSchema);
+const Image = mongoose.model('Image', imageSchema);
+
+module.exports = Image;
